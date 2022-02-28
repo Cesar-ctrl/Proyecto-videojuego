@@ -1,0 +1,36 @@
+header{
+    background: rgb(2,1,1);
+    background: linear-gradient(0deg, rgba(2,1,1,0.7340686274509804) 31%, rgba(2,1,1,1) 51%, rgba(2,0,29,1) 65%, rgba(0,8,42,1) 75%, rgba(7,0,87,1) 100%);
+    display: flex;
+    justify-content: space-evenly;
+    img#logo{
+        width: 50px;
+    }
+    nav{
+        min-width: 500px;
+        display: flex;
+        justify-content: space-around;
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: x-large;
+            color: #a60000; 
+        }
+    }
+    h1{
+        font-family: 'Mango';
+        color: aquamarine;
+    }
+    a#account{
+        display: flex;
+        max-width: 100px;
+    }
+    
+}
+@font-face {
+   font-family: 'Mango';
+   src: url('../fonts/MangoBiteDemoRegular.ttf') format("truetype");
+   font-weight: normal;
+   font-style: normal;
+}

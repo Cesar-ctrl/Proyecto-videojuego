@@ -1,0 +1,71 @@
+@import "scroll";
+@import "carrousel";
+@import "header";
+#cabecera{
+width: 100%;
+height: 500px;
+}
+
+#video_background {
+position: fixed;
+bottom: 0px;
+right: 0px;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -1000;
+overflow: hidden;
+}
+
+#video_pattern {
+background:#fff;
+position: fixed;
+opacity: 0.8;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+z-index: 1;
+}
+
+main{
+    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,0) 22%, rgba(0,0,0,0.6612394957983193) 31%, rgba(0,0,0,0.9) 43%, rgba(2,1,1,1) 53%, rgba(0,0,0,0.9) 62%, rgba(0,0,0,0.6556372549019608) 70%, rgba(1,0,0,0.8) 76%, rgba(4,2,1,0) 100%);
+display: flex;
+flex-direction: column;
+align-items: center;
+    img{
+        
+        margin-bottom: 10vh;
+        }
+}
+
+#exposicion{
+width: 75%;
+} 
+
+
+#personajes{
+    display: flex;
+    flex-direction: column; 
+    
+    #contenido{
+        display: flex;
+        flex-direction: row;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        h2{
+            font-family: 'Mango';
+        color: aquamarine;
+        }
+        #ch{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+        }
+    }
+}
