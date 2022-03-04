@@ -5,15 +5,18 @@
   <meta charset="utf-8"/>
   
   <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.4.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
-
+//Documentar
   <title>My First Parcel App</title>
   <link rel="stylesheet" href="asserts/styles/app.scss" />
+  <script src="asserts/scripts/galeria.js"></script>
   <script src="asserts/scripts/app.js"></script>
   
 </head>
 <body>
   <video autoplay="autoplay" loop="loop" id="video_background" preload="auto">
-    <source src="./asserts/images/fondo.mp4" type="video/mp4" />
+    <source src="./asserts/images/fondo.mp4" type="video/mp4" /><!-- Archivo MP4: Buena calidad. Alternativa libre a MP3. Recomendado soporte medio-->
+    <source src="./asserts/images/fondo.ogv" type="video/ogg" /><!-- Archivo Ogv: Alternativa libre a MP4. Recomendado con Precaución-->
+    <source src="./asserts/images/fondo.webm" type="video/webm" /><!-- Archivo WebM: Alternativa libre a MP4 de Google. Recomendado soporte medio-->
   </video>
   
   <header>
@@ -32,27 +35,68 @@
     <section id="imagenes">
       <header><h1 style="font-family:'Mango';">Escenarios disponibles</h1></header>
       <button id="retroceder"><img id="atras" src="asserts/images/Retroceder.svg" alt=""></button>
-      
       <img id="imagen">
       <button id="avanzar"><img src="asserts/images/Avanzar.svg" alt=""></button>
       <img src="" alt="">
     </section>
+    <!--Hacer responsive (con imagenes más pequeñas)
+    es casi imposible con mi carrousel, por que lo que este hace es poner imagenes
+    de fondo en la etiqueta div e ir alternando, así que lo que recibe el html es un div con
+    una imagen de fondo, y poner varias versiones responsive de un div solo deformaría la imagen 
+    -->
     <section id="personajes">
       <header><h1>Personajes Disponibles</h1></header>
-      <div id="contenido">
-        <div id="ch"> 
-          <img src="asserts/images/runawyaFinal - copia.svg" alt="">
-          <h2>Prince</h2>
-        </div>
-        <div id="ch">
-          <img src="asserts/images/plage-pose1.svg" alt="">
-          <h2>Plage Doc</h2>
-        </div>
+
+    <ul class="ul" id="contenido">
+      <li class="li">
+          <a href="#" class="a" title="Imagen 1">
+              <img src="asserts/images/logo.svg" alt="Imagen 1" class="img" loading="lazy">
+              <h2>Logo</h2>
+          </a>
+      </li>
+      <li class="li">
+          <a href="#" class="a" title="Imagen 2">
+              <img src="asserts/images/runawyaFinal - copia.svg" alt="Imagen 2" class="img" loading="lazy">
+              <h2>Prince</h2>
+          </a>
+      </li>
+      <li class="li">
+          <a href="#" class="a" title="Imagen 3">
+              <img src="asserts/images/plage-pose1.svg" alt="Imagen 3" class="img" loading="lazy">
+              <h2>Plage Doc</h2>
+          </a>
+      </li>
+    </ul>
+  
+    <div class="lightbox">
+        <button class="cerrar">Cerrar</button>
+        <img src="asserts/images/logo.svg" alt="Imagen 1" class="grande" loading="lazy">
     </div>
     </section>
   </main>
- 
+  <!--He probado la web en 3 navegadores distintos, Opera, Internet Explorer y Chrome
+      No ha dado problemas de ningún tipo en cuanto a cargar imagenes, aduio y video.
+      Tampoco al cargar los elementos interactivos-->
 
-  <audio src="./asserts/images/audio.mp3" autoplay loop></audio>
+  <audio autoplay loop>
+    <source src="./asserts/images/audio.mp3"  /><!-- Archivo MP3: Buena calidad. Recomendado buen soporte-->
+    <source src="./asserts/images/audio.ogg"  /> <!-- Archivo Ogg: Buena calidad. Alternativa libre a MP3. Recomendado soporte medio-->
+    <source src="./asserts/images/audio.opus"  /><!-- Archivo Opus: Buena calidad. Alternativa libre a MP3. Recomendado soporte medio-->
+  </audio>
 </body>
 </html> 
+<!--
+  Comento aquí por que en JSON no se admiten comentarios.
+  Este código del JSON generado por parcel especifica:
+  Puedes especificar las versiones del navegador y de Node.js mediante consultas,
+  Por estadísticas de uso,
+  Últimas versiones,
+  Versiones de Node.js y
+  Versiones de navegadores.
+
+  Se especifica que necesitamos una web que pueda funcionar en todos los navegadores que tengan actualmente
+  soporte, adaptado para las últimas 3 versiones y que su uso a nivel mundial sea más del
+  0,3 % de la población.
+
+    "browserslist": "> 0.3%, last 3 versions, not dead",
+-->
